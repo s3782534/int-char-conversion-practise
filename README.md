@@ -9,9 +9,10 @@ The program has two modes:
 The program will prompt the user to either insert an integer or a unicode character, depending
 on the mode. The program will then convert it to the other type.
 
-The mode the program is in is selected once the program is started. Since rust uses
-unicode for the characters, the integers will have to be in that format, but since
-it is backwards compatible with ASCHII those values will work as well.
+The mode is selected upon starting up the program, after giving an input the user is prompted
+again for which mode they would like to use.
+Since rust uses unicode for the characters, the integers will have to be in that format, but since
+it is backwards compatible with ASCII those values will work as well.
 
 ## Why was this created?
 
