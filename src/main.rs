@@ -1,3 +1,4 @@
+use std::char;
 use std::io;
 
 fn main() {
@@ -27,6 +28,13 @@ fn main() {
 
 fn int_to_char() {
     println!("Enter integer to convert to a character:");
+    let mut int_input = String::new();
+    io::stdin()
+        .read_line(&mut int_input)
+        .expect("Failed to read line");
+    let i: u32 = int_input.trim().parse().expect("Please type a integer");
+    let c = char::from_u32(i).expect("Integer is not a valid unicode character.");
+    println!("{} is represented as {} as an unicode character.", i, c);
 }
 
 fn char_to_int() {
